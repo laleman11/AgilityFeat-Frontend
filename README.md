@@ -10,7 +10,7 @@ React + Vite single-page application that consumes the AgilityFeat underwriting 
    ```
 
 2. **Set the backend URL (optional)**
-   The UI targets `/api` by default, so with the provided Vite proxy it will forward requests to `http://localhost:8080`. If your backend lives elsewhere, create a `.env` file and override the base URL:
+   The UI targets `/api` by default, so with the provided Vite proxy it will forward requests to `http://localhost:8081`. If your backend lives elsewhere, create a `.env` file and override the base URL:
    ```bash
    echo 'VITE_API_BASE_URL=https://your-backend-host' > .env
    ```
@@ -19,7 +19,7 @@ React + Vite single-page application that consumes the AgilityFeat underwriting 
    ```bash
    npm run dev
    ```
-   The Vite dev server runs on [http://localhost:5173](http://localhost:5173) and proxies API calls to the Go backend running on port `8080`.
+   The Vite dev server runs on [http://localhost:5173](http://localhost:5173) and proxies API calls to the Go backend running on port `8081`.
 
 4. **Production build**
    ```bash
@@ -40,9 +40,9 @@ React + Vite single-page application that consumes the AgilityFeat underwriting 
 | Variable             | Purpose                                                | Default                |
 | -------------------- | ------------------------------------------------------ | ---------------------- |
 | `VITE_API_BASE_URL`  | Explicit backend base URL for API calls                | `''` (same origin)     |
-| `VITE_PROXY_TARGET`  | Alternate backend target for the Vite dev server proxy | `http://localhost:8080` |
+| `VITE_PROXY_TARGET`  | Alternate backend target for the Vite dev server proxy | `http://localhost:8081` |
 
-When both variables are left untouched, running the Go backend on `localhost:8080` will work out of the box in development.
+When both variables are left untouched, running the Go backend on `localhost:8081` will work out of the box in development.
 
 ## Scripts
 
